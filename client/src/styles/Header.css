@@ -1,0 +1,89 @@
+.div-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 18px 40px;
+
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+
+  font-family: "Segoe UI", sans-serif;
+}
+
+.div-titulo {
+  display: flex;
+  flex-direction: column;
+}
+
+.div-titulo h1 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 600;
+  color: #111;
+}
+
+.div-titulo small {
+  font-size: 13px;
+  color: #666;
+
+  animation: fadeSlide 0.4s ease;
+}
+
+.div-opcoes {
+  display: flex;
+  gap: 28px;
+}
+
+.div-opcoes p {
+  margin: 0;
+  font-size: 14px;
+  color: #444;
+
+  cursor: pointer;
+  position: relative;
+
+  transition: all 0.25s ease;
+}
+
+.div-opcoes p:hover {
+  color: #0078d4;
+}
+
+/* underline animado estilo Microsoft */
+.div-opcoes p::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+
+  width: 0%;
+  height: 2px;
+
+  background: #0078d4;
+
+  transition: width 0.3s ease;
+}
+
+.div-opcoes p:hover::after {
+  width: 100%;
+}
+
+
+/* animação do texto */
+
+@keyframes fadeSlide {
+
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
