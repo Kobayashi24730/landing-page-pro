@@ -1,0 +1,176 @@
+.sales {
+
+  padding: 100px 10%;
+
+  text-align: center;
+
+  background: #f8f8f8;
+}
+
+/* header */
+
+.sales-header {
+
+  max-width: 700px;
+
+  margin: auto;
+
+  margin-bottom: 60px;
+}
+
+.sales-header h2 {
+
+  font-size: 36px;
+
+  margin-bottom: 10px;
+}
+
+.sales-header p {
+
+  color: #666;
+
+  line-height: 1.6;
+}
+
+/* cards container */
+
+.sales-cards {
+
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+
+  gap: 30px;
+
+  max-width: 1000px;
+
+  margin: auto;
+}
+
+/* card */
+
+.sales-card {
+
+  border-radius: 12px;
+
+  overflow: hidden;
+
+  background: white;
+
+  color: black;
+
+  padding-bottom: 20px;
+
+  transition: 0.25s;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.sales-card:hover {
+
+  transform: translateY(-6px);
+
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* imagem */
+
+.sales-card img {
+
+  width: 100%;
+
+  height: 180px;
+
+  object-fit: cover;
+
+  display: block;
+}
+
+/* icone */
+
+.sales-icon {
+
+  margin-top: 15px;
+
+  font-size: 22px;
+
+  color: #6a5cff;
+}
+
+/* titulo */
+
+.sales-card h3 {
+
+  margin-top: 10px;
+
+  font-size: 20px;
+}
+
+/* descrição */
+
+.sales-card p {
+
+  padding: 0 20px;
+
+  color: #666;
+
+  margin-top: 10px;
+
+  line-height: 1.5;
+}
+
+/* botão */
+
+.sales-card button {
+
+  margin-top: 20px;
+
+  padding: 12px 24px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: #6a5cff;
+
+  color: white;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.25s;
+}
+
+.sales-card button:hover {
+
+  background: #5848e5;
+}
+
+.sales-card {
+
+  position: relative;
+}
+
+.sales-card::before {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  border-radius: 12px;
+
+  padding: 1px;
+
+  background: linear-gradient(120deg, #6a5cff, #9f8cff);
+
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+
+  -webkit-mask-composite: xor;
+
+  mask-composite: exclude;
+}

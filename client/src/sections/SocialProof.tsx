@@ -1,38 +1,92 @@
-import FotoOne from "../assets/FotoOne.png";
-import FotoTwo from "../assets/FotoTwo.png";
+import FotoOne from "../assets/img-1.jpeg";
+import FotoTwo from "../assets/img-2.jpg";
 
-export default function SoxialProof() {
-  reurn(
-    <div>
+import { FaWhatsapp, FaInstagram, FaGithub } from "react-icons/fa";
 
-      <h2><small>Tipo</small>Crie o caminho digital para seu sucesso!!</h2>
-      <div>
-        <div>
-          <img src={FotoOne}>
-          <h3>Tipo tal</h3>
-          <small>pequeno small</small>
-          <p>descricao</p>
-          <div>
-            <span className="icon-watz"></span>
-            <span className="icon-insta" ></span>
-            <span className="icon-git"></span>
-          </div>
-        </div>
-      </div>
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper/modules";
 
-      <div>
-        <div>
-          <img src={FotoTwo}>
-          <h3>Tipo tal</h3>
-          <small>pequeno small</small>
-          <p>descricao</p>
-          <div>
-            <span className="icon-watz"></span>
-            <span className="icon-insta" ></span>
-            <span className="icon-git"></span>
-          </div>
-        </div>
-      </div>
-    </div>
+import "swiper/css";
+import "swiper/css/pagination";
+
+import "../styles/SocialProof.css";
+
+type Depoimento = {
+  id: number;
+  foto: string;
+  nome: string;
+  cargo: string;
+  texto: string;
+};
+
+export default function SocialProof() {
+
+  const depoimentos: Depoimento[] = [
+    {
+      id: 1,
+      foto: FotoOne,
+      nome: "Carlos Silva",
+      cargo: "Empreendedor",
+      texto:
+        "A landing page aumentou muito meus contatos de clientes. O design ficou profissional e rápido."
+    },
+    {
+      id: 2,
+      foto: FotoTwo,
+      nome: "Ana Souza",
+      cargo: "Marketing Digital",
+      texto:
+        "Depois da nova landing page nossa taxa de conversão aumentou bastante. Excelente trabalho!"
+    }
+  ];
+
+  return (
+    <section className="social-proof">
+
+      <h2 className="social-title">
+        <small>Depoimentos</small>
+        Crie o caminho digital para seu sucesso!
+      </h2>
+
+      <Swiper
+        modules={[Autoplay, Pagination]}
+        spaceBetween={30}
+        slidesPerView={1}
+        autoplay={{ delay: 3500 }}
+        pagination={{ clickable: true }}
+        breakpoints={{
+          768: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 }
+        }}
+        className="social-swiper"
+      >
+
+        {depoimentos.map((dep) => (
+          <SwiperSlide key={dep.id}>
+
+            <div className="social-card">
+
+              <img src={dep.foto} alt={dep.nome} />
+
+              <h3>{dep.nome}</h3>
+
+              <small>{dep.cargo}</small>
+
+              <p>{dep.texto}</p>
+
+              <div className="social-icons">
+                <FaWhatsapp />
+                <FaInstagram />
+                <FaGithub />
+              </div>
+
+            </div>
+
+          </SwiperSlide>
+        ))}
+
+      </Swiper>
+
+    </section>
   );
 }

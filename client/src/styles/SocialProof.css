@@ -1,0 +1,187 @@
+.social-proof {
+
+  padding: 120px 8%;
+
+  text-align: center;
+
+  background: #081423;
+}
+
+/* título */
+
+.social-title {
+
+  font-size: 38px;
+
+  font-weight: 700;
+
+  color: white;
+
+  margin-bottom: 15px;
+}
+
+.social-title small {
+
+  display: block;
+
+  font-size: 14px;
+
+  color: #6a5cff;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+
+  margin-bottom: 10px;
+}
+
+/* container */
+
+.social-cards {
+
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+
+  gap: 40px;
+
+  max-width: 1100px;
+
+  margin: 60px auto 0 auto;
+}
+
+/* card */
+
+.social-card {
+
+  background: #0f2747;
+
+  padding: 30px;
+
+  border-radius: 14px;
+
+  text-align: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.06);
+
+  transition: 0.35s;
+}
+
+.social-card:hover {
+
+  transform: translateY(-8px);
+
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.45);
+}
+
+/* imagem */
+
+.social-card img {
+
+  width: 90px;
+
+  height: 90px;
+
+  border-radius: 50%;
+
+  object-fit: cover;
+
+  margin-bottom: 15px;
+}
+
+/* nome */
+
+.social-card h3 {
+
+  color: white;
+
+  font-size: 18px;
+
+  margin-bottom: 5px;
+}
+
+/* cargo */
+
+.social-card small {
+
+  color: #b8c7da;
+
+  font-size: 13px;
+
+  display: block;
+
+  margin-bottom: 12px;
+}
+
+/* texto */
+
+.social-card p {
+
+  color: #c7d5e5;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+
+  margin-bottom: 15px;
+}
+
+/* icones */
+
+.social-icons {
+
+  display: flex;
+
+  justify-content: center;
+
+  gap: 14px;
+
+  margin-top: 10px;
+}
+
+.social-icons span {
+
+  width: 34px;
+
+  height: 34px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  cursor: pointer;
+
+  transition: 0.25s;
+}
+
+.social-icons span:hover {
+
+  background: #6a5cff;
+}
+
+.social-swiper {
+
+  max-width: 1100px;
+
+  margin: 60px auto 0 auto;
+
+  padding-bottom: 50px;
+}
+
+.swiper-pagination-bullet {
+
+  background: #6a5cff;
+
+  opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+
+  opacity: 1;
+}

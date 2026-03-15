@@ -23,23 +23,15 @@ export default function Cards() {
 
   return (
     <div className="cards">
-
       {textos.map((tex, index) => (
-
         <div className="card" key={index}>
-
           <span className="card-icon">
             {tex.icon}
           </span>
-
           <h3>{tex.titulo}</h3>
-
           <p>{tex.texto}</p>
-
         </div>
-
       ))}
-
     </div>
   );
 }

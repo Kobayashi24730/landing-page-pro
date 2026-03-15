@@ -1,0 +1,53 @@
+.form-section {
+  padding: 100px 10%;
+  background: #f8f8f8;
+}
+
+.form-container {
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+}
+
+.form-container h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.form-container p {
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.form-grid {
+  display: grid;
+  gap: 15px;
+}
+
+.form-grid input {
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 15px;
+}
+
+.form-grid input:focus {
+  outline: none;
+  border-color: #6a5cff;
+}
+
+button {
+  margin-top: 20px;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 8px;
+  background: #6a5cff;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #5848e5;
+}
