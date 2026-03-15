@@ -38,7 +38,9 @@ export default function Hero() {
           <span><Sparkles size={18} /> Alta conversão</span>
         </div>
 
-        <Button />
+        <div className="hero-cta">
+          <Button />
+        </div>
 
       </div>
 

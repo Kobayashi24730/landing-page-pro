@@ -1,14 +1,10 @@
-import FotoOne from "../assets/img-1.jpeg";
-import FotoTwo from "../assets/img-2.jpg";
-
+import FotoOne from "../assets/profile-1.jpg";
+import FotoTwo from "../assets/profile-2.jpg";
 import { FaWhatsapp, FaInstagram, FaGithub } from "react-icons/fa";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
-
 import "swiper/css";
 import "swiper/css/pagination";
-
 import "../styles/SocialProof.css";
 
 type Depoimento = {
@@ -42,7 +38,6 @@ export default function SocialProof() {
 
   return (
     <section className="social-proof">
-
       <h2 className="social-title">
         <small>Depoimentos</small>
         Crie o caminho digital para seu sucesso!
@@ -60,33 +55,23 @@ export default function SocialProof() {
         }}
         className="social-swiper"
       >
-
         {depoimentos.map((dep) => (
           <SwiperSlide key={dep.id}>
-
             <div className="social-card">
-
               <img src={dep.foto} alt={dep.nome} />
-
               <h3>{dep.nome}</h3>
-
               <small>{dep.cargo}</small>
-
               <p>{dep.texto}</p>
-
               <div className="social-icons">
                 <FaWhatsapp />
                 <FaInstagram />
                 <FaGithub />
               </div>
-
             </div>
-
           </SwiperSlide>
         ))}
 
       </Swiper>
-
     </section>
   );
 }

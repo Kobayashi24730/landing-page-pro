@@ -1,6 +1,6 @@
-import FotoOne from "../assets/img-1.jpeg";
-import FotoTwo from "../assets/img-2.jpg";
-import FotoThree from "../assets/img-3.jpeg";
+import FotoOne from "../assets/profile-1.jpg";
+import FotoTwo from "../assets/profile-2.jpg";
+import FotoThree from "../assets/profile-3.jpeg";
 import { Sparkles, Smartphone, Palette } from "lucide-react";
 import "../styles/SalesCards.css";
 
