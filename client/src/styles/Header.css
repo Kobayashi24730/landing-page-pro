@@ -196,3 +196,79 @@
   }
 
 }
+
+/* BOTÃO HAMBURGUER */
+
+.menu-toggle {
+
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+
+}
+
+.menu-toggle span {
+
+  width: 25px;
+  height: 3px;
+
+  background: white;
+  border-radius: 2px;
+
+  transition: all 0.3s ease;
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .header-menu {
+
+    position: absolute;
+    top: 70px;
+    left: 0;
+
+    width: 100%;
+
+    flex-direction: column;
+    align-items: center;
+
+    gap: 20px;
+
+    background: rgba(5, 10, 20, 0.98);
+
+    padding: 30px 0;
+
+    transform: translateY(-120%);
+    transition: transform 0.35s ease;
+
+    border-bottom: 1px solid rgba(0, 209, 255, 0.2);
+
+  }
+
+  .header-menu.open {
+
+    transform: translateY(0);
+
+  }
+
+  .header-menu a {
+
+    font-size: 16px;
+
+  }
+
+  .header-cta {
+
+    margin-top: 10px;
+
+  }
+
+}

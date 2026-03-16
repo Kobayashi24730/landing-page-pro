@@ -10,6 +10,7 @@ type MenuItem = {
 export default function Header() {
 
   const [texto, setTexto] = useState("de alta conversão!");
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const opcoes: MenuItem[] = [
     { id: 1, nome: "Home", link: "#" },
@@ -31,24 +32,32 @@ export default function Header() {
   return (
     <header className="header">
       <div className="header-container">
-
         <div className="header-brand">
           <h1>Landing Page Pro</h1>
           <small key={texto}>{texto}</small>
         </div>
-
-        <nav className="header-menu">
+        <nav className={`header-menu ${menuOpen ? "open" : ""}`}>
           {opcoes.map((op) => (
-            <a key={op.id} href={op.link}>
+            <a
+              key={op.id}
+              href={op.link}
+              onClick={() => setMenuOpen(false)}
+            >
               {op.nome}
             </a>
           ))}
+          <button className="header-cta">
+            Começar projeto
+          </button>
         </nav>
-
-        <button className="header-cta">
-          Começar projeto
-        </button>
-
+        <div
+          className="menu-toggle"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </div>
     </header>
   );
