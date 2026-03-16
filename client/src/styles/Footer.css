@@ -1,44 +1,198 @@
 .footer {
-  background: #111;
-  color: #eee;
-  padding: 60px 10%;
+
+  background: linear-gradient(135deg, #050a14 0%, #0d1726 100%);
+  color: var(--text-main);
+
+  padding: 80px 10%;
+
+  border-top: 1px solid rgba(0, 209, 255, 0.1);
+
+  margin-top: 60px;
+
 }
 
 .footer-container {
+
   display: flex;
   justify-content: space-between;
-  gap: 40px;
+  gap: 60px;
   flex-wrap: wrap;
+
+  max-width: 1200px;
+  margin: auto;
+
 }
 
 .footer-brand h2 {
-  font-size: 28px;
-  margin-bottom: 10px;
+
+  font-size: clamp(24px, 3vw, 32px);
+  margin-bottom: 12px;
+
+  background: linear-gradient(135deg, #ffffff 0%, var(--accent-cyan) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  font-weight: 700;
+
 }
 
 .footer-brand small {
-  color: #bbb;
+
+  color: var(--text-secondary);
   max-width: 400px;
   display: block;
+
+  line-height: 1.8;
+
 }
 
 .footer-desc {
+
   margin-bottom: 15px;
-  color: #ccc;
+  color: var(--text-secondary);
+
+  font-size: 14px;
+  line-height: 1.8;
+
 }
 
 .footer-icons {
+
   display: flex;
   gap: 16px;
   font-size: 22px;
-  color: #fff;
+  color: var(--text-main);
+
+  margin-top: 20px;
+
+}
+
+.footer-icons a {
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 40px;
+  height: 40px;
+
+  background: rgba(0, 123, 255, 0.1);
+  border: 1px solid rgba(0, 209, 255, 0.2);
+
+  border-radius: 50%;
+
+  transition: all 0.3s ease;
+
+}
+
+.footer-icons a:hover {
+
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent-cyan) 100%);
+  border-color: var(--accent-cyan);
+
+  transform: translateY(-3px);
+
 }
 
 .footer-copy {
-  margin-top: 40px;
-  border-top: 1px solid #333;
-  padding-top: 20px;
+
+  margin-top: 60px;
+  border-top: 1px solid rgba(0, 209, 255, 0.1);
+  padding-top: 30px;
   text-align: center;
-  color: #777;
+  color: var(--text-muted);
   font-size: 14px;
+
+  transition: color 0.3s ease;
+
+}
+
+/* RESPONSIVO - TABLETS */
+
+@media (max-width: 900px) {
+
+  .footer {
+
+    padding: 60px 8%;
+
+  }
+
+  .footer-container {
+
+    gap: 40px;
+
+  }
+
+  .footer-brand h2 {
+
+    font-size: 24px;
+
+  }
+
+}
+
+/* RESPONSIVO - MOBILE */
+
+@media (max-width: 600px) {
+
+  .footer {
+
+    padding: 50px 6%;
+
+    margin-top: 40px;
+
+  }
+
+  .footer-container {
+
+    flex-direction: column;
+    gap: 30px;
+
+  }
+
+  .footer-brand h2 {
+
+    font-size: 20px;
+
+  }
+
+  .footer-copy {
+
+    margin-top: 40px;
+    padding-top: 20px;
+
+  }
+
+}
+
+/* RESPONSIVO - MOBILE PEQUENO */
+
+@media (max-width: 400px) {
+
+  .footer {
+
+    padding: 40px 5%;
+
+  }
+
+  .footer-brand h2 {
+
+    font-size: 18px;
+
+  }
+
+  .footer-icons {
+
+    font-size: 18px;
+
+  }
+
+  .footer-icons a {
+
+    width: 36px;
+    height: 36px;
+
+  }
+
 }

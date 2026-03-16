@@ -1,7 +1,32 @@
 .benefits {
 
-  background: #081423;
+  background: linear-gradient(135deg, #050a14 0%, #0d1726 100%);
   text-align: center;
+
+  position: relative;
+  overflow: hidden;
+
+}
+
+/* EFEITO DE FUNDO DECORATIVO */
+
+.benefits::before {
+
+  content: "";
+  position: absolute;
+
+  width: 600px;
+  height: 600px;
+
+  background: radial-gradient(circle, rgba(0, 123, 255, 0.1), transparent 70%);
+
+  top: -300px;
+  left: -300px;
+
+  filter: blur(100px);
+
+  pointer-events: none;
+  z-index: 1;
 
 }
 
@@ -10,21 +35,90 @@
   max-width: 1100px;
   margin: auto;
 
+  position: relative;
+  z-index: 2;
+
 }
 
 .benefits-title {
 
-  font-size: 40px;
+  font-size: clamp(32px, 5vw, 48px);
   font-weight: 700;
   margin-bottom: 15px;
+
+  background: linear-gradient(135deg, #ffffff 0%, var(--accent-cyan) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  letter-spacing: -0.5px;
 
 }
 
 .benefits-subtitle {
 
-  color: var(--text-muted);
+  color: var(--text-secondary);
 
   max-width: 640px;
   margin: 20px auto 60px;
+
+  font-size: clamp(16px, 2vw, 18px);
+  line-height: 1.8;
+
+}
+
+/* RESPONSIVO - TABLETS */
+
+@media (max-width: 900px) {
+
+  .benefits-title {
+
+    font-size: 36px;
+
+  }
+
+  .benefits-subtitle {
+
+    font-size: 16px;
+
+  }
+
+}
+
+/* RESPONSIVO - MOBILE */
+
+@media (max-width: 600px) {
+
+  .benefits-title {
+
+    font-size: 28px;
+
+  }
+
+  .benefits-subtitle {
+
+    font-size: 14px;
+
+    margin: 15px auto 40px;
+
+  }
+
+}
+
+/* RESPONSIVO - MOBILE PEQUENO */
+
+@media (max-width: 400px) {
+
+  .benefits-title {
+
+    font-size: 24px;
+
+  }
+
+  .benefits-subtitle {
+
+    font-size: 13px;
+
+  }
 
 }
