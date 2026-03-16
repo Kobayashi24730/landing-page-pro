@@ -110,41 +110,42 @@
 
 }
 
-.form-grid button {
+.form-button {
 
-  margin-top: 20px;
+  margin-top: 25px;
 
-  padding: 14px 28px;
+  width: 100%;
+
+  padding: 16px 24px;
+
+  border-radius: 10px;
 
   border: none;
 
-  border-radius: var(--radius-sm);
-
-  background: linear-gradient(135deg, var(--primary) 0%, var(--accent-cyan) 100%);
+  font-size: 15px;
+  font-weight: 600;
 
   color: white;
 
-  font-weight: 600;
-  font-size: 15px;
-  letter-spacing: 0.3px;
+  background: linear-gradient(135deg, #6a5cff 0%, #00d1ff 100%);
 
   cursor: pointer;
 
   transition: all 0.3s ease;
 
-  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+  box-shadow: 0 10px 25px rgba(0, 123, 255, 0.25);
 
 }
 
-.form-grid button:hover {
+.form-button:hover {
 
-  transform: translateY(-2px);
+  transform: translateY(-3px);
 
-  box-shadow: 0 8px 25px rgba(0, 209, 255, 0.4);
+  box-shadow: 0 15px 35px rgba(0, 209, 255, 0.4);
 
 }
 
-.form-grid button:active {
+.form-button:active {
 
   transform: translateY(0);
 

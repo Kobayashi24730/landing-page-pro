@@ -71,7 +71,7 @@ export default function Forms() {
 
           </div>
 
-          <button type="submit">
+          <button type="submit" className="form-button">
             Enviar mensagem
           </button>
         </form>
