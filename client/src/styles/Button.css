@@ -1,28 +1,26 @@
-.button{
+.button {
 
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 
-  padding:12px 28px;
+  padding: 12px 28px;
 
-  border-radius:8px;
+  border-radius: 8px;
 
-  font-weight:600;
+  font-weight: 600;
 
-  color:white;
+  color: white;
 
-  background:#6a5cff;
+  background: var(--primary);
 
-  border:none;
+  transition: 0.25s;
 
-  cursor:pointer;
-
-  transition:0.25s;
 }
 
-.button:hover{
+.button:hover {
 
-  transform:translateY(-2px);
-  background:#5848e5;
+  transform: translateY(-2px);
+  background: var(--primary-hover);
+
 }

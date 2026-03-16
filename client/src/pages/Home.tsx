@@ -6,13 +6,13 @@ import Footer from "../components/layout/Footer.tsx"
 import Forms from "../components/layout/Forms.tsx"
 export default function Home() {
   return (
-    <div>
+    <main>
       <Hero />
       <Benefits />
       <SocialProof />
       <CardsSales />
       <Forms />
       <Footer />
-    </div>
+    </main>
   );
 }
