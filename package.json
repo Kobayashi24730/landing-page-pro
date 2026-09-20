@@ -1,8 +1,9 @@
 {
   "name": "landing-page-pro",
   "version": "1.0.0",
-  "description": "",
+  "description": "Landing page moderna, rápida e responsiva construída com React e Tailwind CSS.",
   "main": "index.js",
+  "type": "commonjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,12 +11,22 @@
     "type": "git",
     "url": "git+https://github.com/Kobayashi24730/landing-page-pro.git"
   },
-  "keywords": [],
+  "keywords": [
+    "react",
+    "tailwind",
+    "landing-page",
+    "shadcn"
+  ],
   "author": "",
-  "license": "ISC",
-  "type": "commonjs",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/Kobayashi24730/landing-page-pro/issues"
   },
-  "homepage": "https://github.com/Kobayashi24730/landing-page-pro#readme"
+  "homepage": "https://github.com/Kobayashi24730/landing-page-pro#readme",
+  "dependencies": {
+    "@radix-ui/react-slot": "^1.3.3",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^3.7.0"
+  }
 }
