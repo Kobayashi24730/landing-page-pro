@@ -1,17 +1,26 @@
 import { useState } from "react";
 import { Send, Loader2, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/Button";
+import { toast } from "sonner";
+import { useSendEmail } from "@/hooks/useSendEmail";
+
+const initialForm = {
+  nome: "",
+  email: "",
+  telefone: "",
+  motivo: "",
+}
 
 export default function Forms() {
-  const [form, setForm] = useState({
-    nome: "",
-    email: "",
-    telefone: "",
-    motivo: "",
+  const [form, setForm] = useState(initialForm);
+  const { mutate, isPending, isSuccess, isError, error, reset: resetMutation } = useSendEmail({
+    onSuccess: () => {  
+      setForm.email(initialForm);
+      toast.success("Mensagem enviada com sucesso!");
+    }, onError: () => {
+      toast.error("Ocorreu um erro ao enviar a mensagem.");
+    },
   });
-
-  const [loading, setLoading] = useState(false);
-  const [enviado, setEnviado] = useState(false);
 
   /**
    * @param {React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>} e
@@ -26,19 +35,9 @@ export default function Forms() {
 
   async function enviarInfos(e) {
     e.preventDefault();
-    setLoading(true);
-
-    try {
-      console.log("Dados enviados:", form);
-      await new Promise((resolve) => setTimeout(resolve, 1500));
-      setEnviado(true);
-      setForm({ nome: "", email: "", telefone: "", motivo: "" });
-    } catch (error) {
-      console.error("Erro ao enviar:", error);
-    } finally {
-      setLoading(false);
-    }
-  }
+    if (!form.email || !form.nome) return;
+    mutate(form);
+  } 
 
   return (
     <section id="contact" className="bg-background py-16 md:py-24">
@@ -56,7 +55,7 @@ export default function Forms() {
         </div>
 
         <div className="mx-auto mt-12 max-w-xl rounded-xl border bg-card p-6 sm:p-8 shadow-sm text-card-foreground">
-          {enviado ? (
+          {isSuccess ? (
             <div className="flex flex-col items-center justify-center py-8 text-center animate-fade-in">
               <CheckCircle2 className="h-12 w-12 text-emerald-500 mb-4" />
               <h3 className="text-xl font-semibold text-foreground">Mensagem enviada com sucesso!</h3>
@@ -141,10 +140,10 @@ export default function Forms() {
 
               <Button
                 type="submit"
-                disabled={loading}
+                disabled={isPending}
                 className="w-full gap-2"
               >
-                {loading ? (
+                {isPending ? (
                   <>
                     <Loader2 className="h-4 w-4 animate-spin" />
                     Enviando...

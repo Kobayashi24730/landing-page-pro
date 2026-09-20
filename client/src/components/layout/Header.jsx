@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Button } from "@/components/ui/Button";
 
 const opcoes = [
   { id: 1, nome: "Home", link: "#" },
@@ -44,9 +45,9 @@ export default function Header() {
               {op.nome}
             </a>
           ))}
-          <button className="rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90">
-            Começar projeto
-          </button>
+          <Button asChild>
+            <a href="#contact">Começar projeto</a>
+          </Button>
         </nav>
         <div
           type="button"

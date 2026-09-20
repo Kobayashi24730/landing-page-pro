@@ -2,6 +2,7 @@ import FotoOne from "@/assets/web-1.jpg";
 import FotoTwo from "@/assets/web-2.jpg";
 import FotoThree from "@/assets/web-3.jpg";
 import { Sparkles, Smartphone, Palette, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/Button";
 
 const opcoes = [
   {
@@ -75,12 +76,14 @@ export default function CardsSales() {
                   </div>
 
                   <div className="mt-6">
-                    <button
-                      onClick={() => handleSubmit(op.id, op.titulo)}
-                      className="inline-flex w-full items-center justify-center gap-2 rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
-                    >
-                      Tenho interesse <ArrowRight className="h-4 w-4" />
-                    </button>
+                    <a href="#contact">
+                      <Button
+                        onClick={() => handleSubmit(op.id, op.titulo)}
+                        className="inline-flex w-full items-center justify-center gap-2 rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+                      >
+                        Tenho interesse <ArrowRight className="h-4 w-4" />
+                      </Button>
+                    </a>
                   </div>
                 </div>
               </div>
